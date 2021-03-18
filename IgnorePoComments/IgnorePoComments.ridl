@@ -1,0 +1,59 @@
+// ************************************************************************ //
+// WARNUNG
+// -------
+// Diese Datei wird von dem Typbibliotheks-Importer oder dem Typbibliothekseditor
+// erzeugt. Außer Syntaxfehlern analysiert der Editor an der Datei vorgenommene
+// Änderungen. Wenn Sie aber Änderungen mit dem Editor vornehmen, wird diese
+// Datei neu erzeugt und Kommentare oder Formatänderungen gehen verloren.
+// ************************************************************************ //
+// Datei erzeugt am 18.03.2021 16:55:44 (- $Rev: 12980 $, 624696921).
+
+[
+  uuid(4D5BB88E-5157-4B30-9228-29D9C9F068B8),
+  version(1.0),
+  helpstring("IgnorePoComments - DO NOT REGISTER TYPE LIBRARY")
+
+]
+library IgnorePoComments
+{
+
+  importlib("stdole2.tlb");
+
+  interface IWinMergeScript;
+  coclass WinMergeScript;
+
+
+  [
+    uuid(92668DE5-8BA0-4C04-97AA-16D360550BBB),
+    version(1.0),
+    helpstring("IgnorePoComments"),
+    dual,
+    oleautomation
+  ]
+  interface IWinMergeScript: IDispatch
+  {
+    [propget, id(0x00000001)]
+    HRESULT _stdcall PluginEvent([out, retval] BSTR* Value);
+    [propget, id(0x00000002)]
+    HRESULT _stdcall PluginDescription([out, retval] BSTR* Value);
+    [propget, id(0x00000003)]
+    HRESULT _stdcall PluginFileFilters([out, retval] BSTR* Value);
+    [propget, id(0x00000004)]
+    HRESULT _stdcall PluginIsAutomatic([out, retval] VARIANT_BOOL* Value);
+    [id(0x00000007)]
+    HRESULT _stdcall UnpackFile([in] BSTR fileSrc, [in] BSTR fileDst, [in, out] VARIANT_BOOL* Changed, [in, out] long* Subcode, [out, retval] VARIANT_BOOL* Value);
+    [id(0x00000008)]
+    HRESULT _stdcall PackFile([in] BSTR fileSrc, [in] BSTR fileDst, [in, out] VARIANT_BOOL* Changed, [in] long Subcode, [out, retval] VARIANT_BOOL* Value);
+  };
+
+  [
+    uuid(A0AA7EDF-D2FC-4237-8CBF-CD0EA03C9816),
+    version(1.0),
+    helpstring("IgnorePoComments Class")
+  ]
+  coclass WinMergeScript
+  {
+    [default] interface IWinMergeScript;
+  };
+
+};
