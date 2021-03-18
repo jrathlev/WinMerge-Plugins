@@ -2,7 +2,7 @@
 
 ## IgnorePoComments
 
-Remove all comment lines starting with "#" from po files. 
+Remove all comment lines starting with "#" from *po* files. 
 
  * No packing (no save).
  * Event: `FILE_PACK_UNPACK`
