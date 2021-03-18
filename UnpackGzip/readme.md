@@ -1,7 +1,7 @@
 ## UnpackGz plugin
 
 This plugin for WinMerge allows to unpack a *gz* file before comparing
-and pack to new gz file after merging.
+and pack to new *gz* file after merging.
 Only files with extension *gz* will be unpacked, all other files
 are loaded without gz handling.
 
@@ -29,10 +29,10 @@ real file size.
 
 **Overview:**
 - Category: Unpacker
-- File filter: *.gz
+- File filter: `*.gz`
 - Packing: Yes
 - Settings dialog support: No
-- Dependency: gzip
+- Dependency: `gzip`
 
 The plugin is written in *Delphi 10 Seattle*
 
