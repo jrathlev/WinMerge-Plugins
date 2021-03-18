@@ -36,5 +36,3 @@ real file size.
 
 The plugin is written in *Delphi 10 Seattle*
 
-J. Rathlev, D-24222 Schwentinental, March 2021
-
