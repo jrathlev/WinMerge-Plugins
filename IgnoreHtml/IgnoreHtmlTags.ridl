@@ -1,0 +1,59 @@
+// ************************************************************************ //
+// WARNUNG
+// -------
+// Diese Datei wird von dem Typbibliotheks-Importer oder dem Typbibliothekseditor
+// erzeugt. Außer Syntaxfehlern analysiert der Editor an der Datei vorgenommene
+// Änderungen. Wenn Sie aber Änderungen mit dem Editor vornehmen, wird diese
+// Datei neu erzeugt und Kommentare oder Formatänderungen gehen verloren.
+// ************************************************************************ //
+// Datei erzeugt am 20.03.2021 12:42:38 (- $Rev: 12980 $, 782309109).
+
+[
+  uuid(5E7787FD-4A98-4113-B48E-04D7C8D6C035),
+  version(1.0),
+  helpstring("IgnoreHtmlTags - Type library")
+
+]
+library IgnoreHtmlTags
+{
+
+  importlib("stdole2.tlb");
+
+  interface IWinMergeScript;
+  coclass WinMergeScript;
+
+
+  [
+    uuid(7D1D732C-423A-4FFE-AA6B-60222691FA9E),
+    version(1.0),
+    helpstring("IgnoreHtmlTags"),
+    dual,
+    oleautomation
+  ]
+  interface IWinMergeScript: IDispatch
+  {
+    [propget, id(0x00000001)]
+    HRESULT _stdcall PluginEvent([out, retval] BSTR* Value);
+    [propget, id(0x00000002)]
+    HRESULT _stdcall PluginDescription([out, retval] BSTR* Value);
+    [propget, id(0x00000003)]
+    HRESULT _stdcall PluginFileFilters([out, retval] BSTR* Value);
+    [propget, id(0x00000004)]
+    HRESULT _stdcall PluginIsAutomatic([out, retval] VARIANT_BOOL* Value);
+    [id(0x00000007), helpstring("Separate text from HTML")]
+    HRESULT _stdcall UnpackFile([in] BSTR fileSrc, [in] BSTR fileDst, [in, out] VARIANT_BOOL* Changed, [in, out] long* Subcode, [out, retval] VARIANT_BOOL* Value);
+    [id(0x00000008), helpstring("Merge text and HTML")]
+    HRESULT _stdcall PackFile([in] BSTR fileSrc, [in] BSTR fileDst, [in, out] VARIANT_BOOL* Changed, [in] long Subcode, [out, retval] VARIANT_BOOL* Value);
+  };
+
+  [
+    uuid(0D7B39BF-2540-422F-9BB2-A8DFBA7C15EE),
+    version(1.0),
+    helpstring("IgnoreHtmlTags Class")
+  ]
+  coclass WinMergeScript
+  {
+    [default] interface IWinMergeScript;
+  };
+
+};

@@ -1,0 +1,57 @@
+// ************************************************************************ //
+// WARNUNG
+// -------
+// Diese Datei wird von dem Typbibliotheks-Importer oder dem Typbibliothekseditor
+// erzeugt. Außer Syntaxfehlern analysiert der Editor an der Datei vorgenommene
+// Änderungen. Wenn Sie aber Änderungen mit dem Editor vornehmen, wird diese
+// Datei neu erzeugt und Kommentare oder Formatänderungen gehen verloren.
+// ************************************************************************ //
+// Datei erzeugt am 21.03.2021 12:14:44 (- $Rev: 12980 $, 867030906).
+
+[
+  uuid(326A4463-B757-4B72-933C-D475FE336397),
+  version(1.0),
+  helpstring("IgnoreHtmlMarker - Type library")
+
+]
+library IgnoreHtmlMarker
+{
+
+  importlib("stdole2.tlb");
+
+  interface IWinMergeScript;
+  coclass WinMergeScript;
+
+
+  [
+    uuid(5A2BFD42-E1C6-4F67-AD0C-B2AA82594FDA),
+    version(1.0),
+    helpstring("IgnoreHtmlMarker"),
+    dual,
+    oleautomation
+  ]
+  interface IWinMergeScript: IDispatch
+  {
+    [propget, id(0x00000001)]
+    HRESULT _stdcall PluginEvent([out, retval] BSTR* Value);
+    [propget, id(0x00000002)]
+    HRESULT _stdcall PluginDescription([out, retval] BSTR* Value);
+    [propget, id(0x00000003)]
+    HRESULT _stdcall PluginFileFilters([out, retval] BSTR* Value);
+    [propget, id(0x00000004)]
+    HRESULT _stdcall PluginIsAutomatic([out, retval] VARIANT_BOOL* Value);
+    [id(0x00000005), helpstring("Prediff for HTML")]
+    HRESULT _stdcall PrediffBufferW([in, out] BSTR* Text, [in, out] int* Size, [in, out] VARIANT_BOOL* Changed, [out, retval] VARIANT_BOOL* Value);
+  };
+
+  [
+    uuid(A25C2DAF-39A6-465B-A206-4920344F283F),
+    version(1.0),
+    helpstring("IgnoreHtmlMarker Class")
+  ]
+  coclass WinMergeScript
+  {
+    [default] interface IWinMergeScript;
+  };
+
+};
