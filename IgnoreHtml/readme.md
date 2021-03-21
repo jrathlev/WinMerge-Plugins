@@ -26,10 +26,12 @@ It consists of two plugin libraries:
 - Dependency: all HTML files
 
 **2. IgnoreHtmlMarker:**
-   *Prediff*: Ignore the fragment number at beginning of each line of text and
+
+- *Prediff*: Ignore the fragment number at beginning of each line of text and
      line break markers
 
 **Overview:**
+
 - Category: Prediffer
 - File filter: `*.html`
 - Settings dialog support: No
