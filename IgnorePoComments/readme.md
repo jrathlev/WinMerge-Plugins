@@ -5,7 +5,7 @@ po files prior to comparison.
 
 **Overview:**
 - Category: Unpacker
-- File filter: *.po
+- File filter: `*.po`
 - Packing: No
 - Settings dialog support: No
 - Dependency: GnuGetTxt
