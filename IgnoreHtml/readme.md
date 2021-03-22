@@ -20,7 +20,7 @@ It consists of two plugin libraries:
 **Overview:**
 
 - Category: Unpacker
-- File filter: `*.html`
+- File filter: `*.html, *.htm`
 - Packing: yes
 - Settings dialog support: No
 - Dependency: all HTML files
@@ -33,7 +33,7 @@ It consists of two plugin libraries:
 **Overview:**
 
 - Category: Prediffer
-- File filter: `*.html`
+- File filter: `*.html, *.htm`
 - Settings dialog support: No
 - Dependency: all HTML files
 
