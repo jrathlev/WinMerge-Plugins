@@ -2,7 +2,7 @@
 
 ## IgnorePoComments
 
-Remove all comment lines starting with "#" from *po* files. 
+Remove all comment lines starting with "#" from po files. 
 
  * No packing (no save).
  * Event: `FILE_PACK_UNPACK`
@@ -22,10 +22,9 @@ Remove HTML tags from file to compare the pure text
 ### IgnoreHtmlTags
 
  * Event: `FILE_PACK_UNPACK`
- * File filter: `.html`
+ * File filter: `*.html, *.htm`
   
 ### IgnoreHtmlMarker
 
  * Event: `BUFFER_PREDIFF`
- * File filter: `.html`
- 
+ * File filter: `*.html, *.htm`
